@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pokerLoadingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="O4i-Q0-m1l">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokerLoadingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="O4i-Q0-m1l">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0w5-jv-AJR">
@@ -26,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="61" id="1ax-bn-1G7"/>
                                     <constraint firstAttribute="width" constant="209" id="JHC-sL-F2a"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="45"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -56,9 +57,13 @@
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="4Pm-4P-svt" secondAttribute="bottom" constant="20" id="96H-yj-vWW"/>
                             <constraint firstItem="4Pm-4P-svt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Giz-nK-bhR"/>
                             <constraint firstItem="hdk-lO-CpS" firstAttribute="top" secondItem="0w5-jv-AJR" secondAttribute="bottom" constant="17" id="LKt-od-cYq"/>
+                            <constraint firstItem="O4i-Q0-m1l" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="PbL-bo-Rqo"/>
                             <constraint firstItem="0w5-jv-AJR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ucl-ce-UQF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O4i-Q0-m1l" secondAttribute="trailing" constant="-20" id="V0c-om-QL9"/>
                             <constraint firstItem="0w5-jv-AJR" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="27" id="XO7-EQ-04n"/>
+                            <constraint firstItem="O4i-Q0-m1l" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="k0e-Ab-8GY"/>
                             <constraint firstItem="hdk-lO-CpS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nK9-qJ-gZf"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="O4i-Q0-m1l" secondAttribute="bottom" id="oVW-Jn-YG0"/>
                         </constraints>
                     </view>
                 </viewController>

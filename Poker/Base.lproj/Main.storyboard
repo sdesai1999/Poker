@@ -20,8 +20,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pokerTexture1" translatesAutoresizingMaskIntoConstraints="NO" id="X9D-nj-rzD">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxz-tR-oTz">
+                                <rect key="frame" x="196" y="48" width="209" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="WOc-VT-u7b"/>
+                                    <constraint firstAttribute="width" constant="209" id="l6I-FZ-dPH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rxz-tR-oTz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uj8-Lc-9IO"/>
+                            <constraint firstItem="rxz-tR-oTz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="z3e-lb-kS3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

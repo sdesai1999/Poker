@@ -9,29 +9,35 @@
 import UIKit
 
 var numPlayers : Int = 0
+var players : [Player] = []
 
 class InitialViewController: UIViewController {
-
+    
     @IBOutlet weak var numPlayersField: UITextField!
-    @IBOutlet weak var playerNameField: UITextField!
+    
+    var didEnterNum : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        playerNameField.hidden = true
     }
-
+    
     @IBAction func okButtonTapped(sender: UIButton) {
         var toContinue = false
         if let tmpPlayers = Int(numPlayersField.text!){
-            if tmpPlayers >= 2 || tmpPlayers <= 6{
+            if tmpPlayers >= 2 && tmpPlayers <= 6{
                 numPlayers = tmpPlayers
-                toContinue = true
+                toContinue = false
             }
         }
         if toContinue == true{
-            playerNameField.hidden = false
             
         }
+    }
+    
+    func createPlayer(){
+        let player = Player()
+        player.myMoney = 100
+        players.append(player)
     }
 }
 

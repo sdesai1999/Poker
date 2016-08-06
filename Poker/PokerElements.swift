@@ -25,10 +25,10 @@ class Player{
     var name:String = ""
     var hand = [Card]()
     var handRank:String = ""
-    var myMoney:Int = 100
+    var myMoney:Int = 0
 }
 
-class DealerTable{
+class Dealer{
     var players = [Player]()
     var dealersMoney = 0
 }

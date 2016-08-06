@@ -46,5 +46,6 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         for i in 0..<numPlayers{
             createPlayer(nameFields[i].text!)
         }
+        self.performSegueWithIdentifier("exitNamesVC", sender: self)
     }
 }

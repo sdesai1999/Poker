@@ -78,16 +78,17 @@
                     <navigationItem key="navigationItem" id="cwW-F6-EH0"/>
                     <connections>
                         <outlet property="numPlayersField" destination="bbt-mg-Q4m" id="8Ib-ms-kPA"/>
+                        <segue destination="hqa-W1-5uu" kind="show" identifier="PlayersToNames" id="Hqn-ON-GPC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1272" y="591"/>
         </scene>
-        <!--View Controller-->
+        <!--Name View Controller-->
         <scene sceneID="hSz-Hk-HpZ">
             <objects>
-                <viewController id="hqa-W1-5uu" sceneMemberID="viewController">
+                <viewController id="hqa-W1-5uu" customClass="NameViewController" customModule="Poker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ngm-cc-Ris"/>
                         <viewControllerLayoutGuide type="bottom" id="5ue-dU-TJM"/>
@@ -96,9 +97,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokerTexture1" translatesAutoresizingMaskIntoConstraints="NO" id="dGz-a8-rDm">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Names" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrS-jc-9WE">
                                 <rect key="frame" x="172" y="47" width="257" height="61"/>
                                 <constraints>
@@ -109,17 +107,49 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iog-yS-1AO">
-                                <rect key="frame" x="158" y="149" width="284" height="263"/>
+                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iog-yS-1AO">
+                                <rect key="frame" x="158" y="151" width="284" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokerTexture1" translatesAutoresizingMaskIntoConstraints="NO" id="dGz-a8-rDm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Names" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIl-9d-IqB">
+                                <rect key="frame" x="172" y="47" width="257" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="Gfs-9X-la7"/>
+                                    <constraint firstAttribute="height" constant="61" id="ohm-jW-V3v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsw-kH-xPj">
+                                <rect key="frame" x="272" y="546" width="56" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="Zdy-o5-6Ts"/>
+                                    <constraint firstAttribute="height" constant="34" id="tSF-4j-uMV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playPoker:" destination="hqa-W1-5uu" eventType="touchUpInside" id="es4-iY-gys"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cIl-9d-IqB" firstAttribute="top" secondItem="Ngm-cc-Ris" secondAttribute="bottom" constant="27" id="0cq-0g-giY"/>
+                            <constraint firstItem="Iog-yS-1AO" firstAttribute="top" secondItem="wrS-jc-9WE" secondAttribute="bottom" constant="43" id="3B1-9o-C4s"/>
+                            <constraint firstItem="qsw-kH-xPj" firstAttribute="centerX" secondItem="XNc-6Z-PXf" secondAttribute="centerX" id="5c7-hl-Zw9"/>
                             <constraint firstItem="dGz-a8-rDm" firstAttribute="leading" secondItem="XNc-6Z-PXf" secondAttribute="leadingMargin" constant="-20" id="9GB-a3-OO9"/>
                             <constraint firstItem="5ue-dU-TJM" firstAttribute="top" secondItem="dGz-a8-rDm" secondAttribute="bottom" id="HF6-o7-s9G"/>
+                            <constraint firstItem="cIl-9d-IqB" firstAttribute="centerX" secondItem="XNc-6Z-PXf" secondAttribute="centerX" id="KsV-vM-TBC"/>
                             <constraint firstItem="wrS-jc-9WE" firstAttribute="centerX" secondItem="XNc-6Z-PXf" secondAttribute="centerX" id="cBh-fX-exI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dGz-a8-rDm" secondAttribute="trailing" constant="-20" id="etA-Px-EQ7"/>
+                            <constraint firstItem="5ue-dU-TJM" firstAttribute="top" secondItem="qsw-kH-xPj" secondAttribute="bottom" constant="20" id="kxS-lP-cJJ"/>
                             <constraint firstItem="dGz-a8-rDm" firstAttribute="top" secondItem="XNc-6Z-PXf" secondAttribute="topMargin" id="n3S-eu-Hr5"/>
                             <constraint firstItem="wrS-jc-9WE" firstAttribute="top" secondItem="Ngm-cc-Ris" secondAttribute="bottom" constant="27" id="s4M-FQ-Uch"/>
                         </constraints>

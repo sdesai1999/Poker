@@ -26,18 +26,13 @@ class InitialViewController: UIViewController {
         if let tmpPlayers = Int(numPlayersField.text!){
             if tmpPlayers >= 2 && tmpPlayers <= 6{
                 numPlayers = tmpPlayers
-                toContinue = false
+                toContinue = true
             }
         }
         if toContinue == true{
-            
+            self.performSegueWithIdentifier("PlayersToNames", sender: self)
         }
     }
     
-    func createPlayer(){
-        let player = Player()
-        player.myMoney = 100
-        players.append(player)
-    }
 }
 

@@ -11,6 +11,7 @@ import UIKit
 class InstructionViewController: UIViewController {
 
     @IBOutlet weak var instructionLabel: UILabel!
+    var handRanks : String = ""
     var instructions : String = ""
     
     override func viewDidLoad() {
@@ -18,7 +19,9 @@ class InstructionViewController: UIViewController {
         instructions = "Everyone starts with $100, and you will each bet money before the round starts. "
         instructions += "You will then be dealt 5 cards each. You will be able to reject up to 3 cards. "
         instructions += "The winner of the round will be determined by how your hand ranks. "
-        instructions += "Ties will be broken by whoever has the highest card that applies to that rank."
+        instructions += "Ties will be broken by whoever has the highest card that applies to that rank.\n"
+        instructions += "If you aren't familiar with hand ranking, tap the button below."
+        instructionLabel.text = instructions
     }
 
 }

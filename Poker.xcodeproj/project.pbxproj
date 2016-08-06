@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		859428231D55607F00EBB275 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859428221D55607F00EBB275 /* InstructionViewController.swift */; };
 		85BD93B31D544CAF005F7B47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD93B21D544CAF005F7B47 /* AppDelegate.swift */; };
-		85BD93B51D544CAF005F7B47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD93B41D544CAF005F7B47 /* ViewController.swift */; };
+		85BD93B51D544CAF005F7B47 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD93B41D544CAF005F7B47 /* InitialViewController.swift */; };
 		85BD93B81D544CAF005F7B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BD93B61D544CAF005F7B47 /* Main.storyboard */; };
 		85BD93BA1D544CAF005F7B47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85BD93B91D544CAF005F7B47 /* Assets.xcassets */; };
 		85BD93BD1D544CAF005F7B47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BD93BB1D544CAF005F7B47 /* LaunchScreen.storyboard */; };
@@ -34,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		859428221D55607F00EBB275 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		85BD93AF1D544CAE005F7B47 /* Poker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BD93B21D544CAF005F7B47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85BD93B41D544CAF005F7B47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85BD93B41D544CAF005F7B47 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		85BD93B71D544CAF005F7B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85BD93B91D544CAF005F7B47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85BD93BC1D544CAF005F7B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,8 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				85BD93B21D544CAF005F7B47 /* AppDelegate.swift */,
-				85BD93B41D544CAF005F7B47 /* ViewController.swift */,
+				85BD93B41D544CAF005F7B47 /* InitialViewController.swift */,
 				85BD93B61D544CAF005F7B47 /* Main.storyboard */,
+				859428221D55607F00EBB275 /* InstructionViewController.swift */,
 				85BD93B91D544CAF005F7B47 /* Assets.xcassets */,
 				85BD93BB1D544CAF005F7B47 /* LaunchScreen.storyboard */,
 				85BD93BE1D544CAF005F7B47 /* Info.plist */,
@@ -256,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85BD93B51D544CAF005F7B47 /* ViewController.swift in Sources */,
+				859428231D55607F00EBB275 /* InstructionViewController.swift in Sources */,
+				85BD93B51D544CAF005F7B47 /* InitialViewController.swift in Sources */,
 				85BD93B31D544CAF005F7B47 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +488,7 @@
 				85BD93D91D544CAF005F7B47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85BD93DA1D544CAF005F7B47 /* Build configuration list for PBXNativeTarget "PokerTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				85BD93DC1D544CAF005F7B47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85BD93DD1D544CAF005F7B47 /* Build configuration list for PBXNativeTarget "PokerUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				85BD93DF1D544CAF005F7B47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

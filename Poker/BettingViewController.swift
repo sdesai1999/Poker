@@ -52,6 +52,7 @@ class BettingViewController: UIViewController, UITextFieldDelegate {
             }
         }
         if safeToContinue == true{
+            deck.newDeck()
             self.performSegueWithIdentifier("exitBettingVC", sender: self)
         }
     }

@@ -224,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="2728" y="591"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="8Wx-h4-O9W">
             <objects>
-                <viewController id="qNZ-pk-vYk" sceneMemberID="viewController">
+                <viewController id="qNZ-pk-vYk" customClass="GameViewController" customModule="Poker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zAR-n7-adI"/>
                         <viewControllerLayoutGuide type="bottom" id="76G-Rl-180"/>
@@ -239,19 +239,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokerTexture1" translatesAutoresizingMaskIntoConstraints="NO" id="HQc-na-j89">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="_____'s Turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2z-Qs-i5A">
-                                <rect key="frame" x="128" y="47" width="345" height="61"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Round 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2z-Qs-i5A">
+                                <rect key="frame" x="128" y="47" width="345" height="52"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="____'s Turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmx-DG-dJv">
+                                <rect key="frame" x="175" y="107" width="250" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNO-75-Vsc">
-                                <rect key="frame" x="138" y="116" width="325" height="328"/>
+                                <rect key="frame" x="138" y="136" width="325" height="328"/>
                                 <subviews>
                                     <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TFz-Z5-Mwa">
                                         <rect key="frame" x="168" y="168" width="103" height="150"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="hearts13" translatesAutoresizingMaskIntoConstraints="NO" id="4S2-nk-YEx">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4S2-nk-YEx">
                                                 <rect key="frame" x="5" y="5" width="93" height="140"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="140" id="7Gh-oC-iAF"/>
@@ -267,7 +273,7 @@
                                     <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dRR-4a-lMq">
                                         <rect key="frame" x="222" y="10" width="103" height="150"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="diamonds4" translatesAutoresizingMaskIntoConstraints="NO" id="zc2-2v-OFH">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zc2-2v-OFH">
                                                 <rect key="frame" x="5" y="5" width="93" height="140"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="93" id="B80-Ve-wbr"/>
@@ -283,7 +289,7 @@
                                     <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pQf-sf-iAj">
                                         <rect key="frame" x="111" y="10" width="103" height="150"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="diamonds13" translatesAutoresizingMaskIntoConstraints="NO" id="0Ct-R3-624">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ct-R3-624">
                                                 <rect key="frame" x="5" y="5" width="93" height="140"/>
                                             </imageView>
                                         </subviews>
@@ -295,7 +301,7 @@
                                     <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y8c-XE-ZOH">
                                         <rect key="frame" x="57" y="168" width="103" height="150"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="hearts10" translatesAutoresizingMaskIntoConstraints="NO" id="1pR-x9-6Pd">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pR-x9-6Pd">
                                                 <rect key="frame" x="5" y="5" width="93" height="140"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="93" id="Cxh-dy-CSJ"/>
@@ -311,7 +317,7 @@
                                     <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="la6-Fj-dI1">
                                         <rect key="frame" x="0.0" y="10" width="103" height="150"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="clubs1" translatesAutoresizingMaskIntoConstraints="NO" id="B8l-an-nCr">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8l-an-nCr">
                                                 <rect key="frame" x="5" y="5" width="93" height="140"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="140" id="YDD-JZ-AVF"/>
@@ -334,15 +340,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HQc-na-j89" firstAttribute="leading" secondItem="SqP-oz-Y2D" secondAttribute="leadingMargin" constant="-20" id="2dO-6i-gPN"/>
-                            <constraint firstItem="TNO-75-Vsc" firstAttribute="top" secondItem="j2z-Qs-i5A" secondAttribute="bottom" constant="8" id="EAa-LC-Cff"/>
                             <constraint firstItem="HQc-na-j89" firstAttribute="top" secondItem="SqP-oz-Y2D" secondAttribute="topMargin" id="Ezi-cl-Yyw"/>
+                            <constraint firstItem="TNO-75-Vsc" firstAttribute="top" secondItem="pmx-DG-dJv" secondAttribute="bottom" constant="8" id="IXW-it-FyD"/>
                             <constraint firstItem="j2z-Qs-i5A" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="QI9-2n-882"/>
                             <constraint firstItem="j2z-Qs-i5A" firstAttribute="top" secondItem="zAR-n7-adI" secondAttribute="bottom" constant="27" id="XsQ-1Z-ert"/>
+                            <constraint firstItem="pmx-DG-dJv" firstAttribute="top" secondItem="j2z-Qs-i5A" secondAttribute="bottom" constant="8" id="gNk-u7-xey"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HQc-na-j89" secondAttribute="trailing" constant="-20" id="gha-5A-BOB"/>
                             <constraint firstItem="TNO-75-Vsc" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="h6d-3L-oVx"/>
                             <constraint firstItem="76G-Rl-180" firstAttribute="top" secondItem="HQc-na-j89" secondAttribute="bottom" id="wem-sM-LoN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playerTurnLabel" destination="pmx-DG-dJv" id="2Lp-ql-R2G"/>
+                        <outlet property="roundLabel" destination="j2z-Qs-i5A" id="FAR-sg-zdp"/>
+                        <outletCollection property="cardImageViews" destination="B8l-an-nCr" collectionClass="NSMutableArray" id="YPv-gM-dVO"/>
+                        <outletCollection property="cardImageViews" destination="0Ct-R3-624" collectionClass="NSMutableArray" id="Hu6-QU-2Pa"/>
+                        <outletCollection property="cardImageViews" destination="zc2-2v-OFH" collectionClass="NSMutableArray" id="x1a-b4-fnE"/>
+                        <outletCollection property="cardImageViews" destination="1pR-x9-6Pd" collectionClass="NSMutableArray" id="c3g-Yg-9b0"/>
+                        <outletCollection property="cardImageViews" destination="4S2-nk-YEx" collectionClass="NSMutableArray" id="N9J-TI-a1G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXh-UF-3Kz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -501,11 +517,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clubs1" width="500" height="726"/>
-        <image name="diamonds13" width="500" height="726"/>
-        <image name="diamonds4" width="500" height="726"/>
-        <image name="hearts10" width="500" height="726"/>
-        <image name="hearts13" width="500" height="726"/>
         <image name="informationButton" width="512" height="512"/>
         <image name="pokerTexture1" width="1080" height="1920"/>
     </resources>

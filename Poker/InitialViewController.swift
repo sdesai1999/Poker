@@ -11,7 +11,9 @@ import UIKit
 var numPlayers : Int = 0
 var players : [Player] = []
 var pot : Int = 0
-var roundCount : Int = 0
+var roundCount : Int = 1
+var deck = Deck()
+var playerTurn : Int = 0
 
 class InitialViewController: UIViewController {
     

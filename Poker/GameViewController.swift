@@ -9,19 +9,62 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
+    
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var playerTurnLabel: UILabel!
     @IBOutlet weak var flipButtonOutlet: UIButton!
     @IBOutlet var cardImageViews: [UIImageView]!
+    @IBOutlet weak var rejectCardsView: UIView!
+    @IBOutlet weak var rejectCardsLabel: UILabel!
+    @IBOutlet weak var yesButtonOutlet: UIButton!
+    @IBOutlet weak var noButtonOutlet: UIButton!
+    @IBOutlet weak var rejectButtonOutlet: UIButton!
+    @IBOutlet var cardUIViews: [UIView]!
+    
+    var numTapped : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        roundLabel.text = "Round \(roundCount)"
-        playerTurnLabel.text = "\(players[0].name)'s Turn"
+        rejectCardsView.hidden = true
         deck.shuffleDeck()
         dealCards()
-        displayBacks()
+        setUpVC(playerTurn)
+        for imageView in cardImageViews{
+            imageView.userInteractionEnabled = true
+        }
+        let tapRecognizer0 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card0Tapped))
+        let tapRecognizer1 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card1Tapped))
+        let tapRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card2Tapped))
+        let tapRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card3Tapped))
+        let tapRecognizer4 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card4Tapped))
+        cardImageViews[0].addGestureRecognizer(tapRecognizer0)
+        cardImageViews[1].addGestureRecognizer(tapRecognizer1)
+        cardImageViews[2].addGestureRecognizer(tapRecognizer2)
+        cardImageViews[3].addGestureRecognizer(tapRecognizer3)
+        cardImageViews[4].addGestureRecognizer(tapRecognizer4)
+        
+    }
+    
+    func card0Tapped(){
+        if cardUIViews[0].backgroundColor = UIColor.greenColor(){
+            
+        }
+    }
+    
+    func card1Tapped(){
+        
+    }
+    
+    func card2Tapped(){
+        
+    }
+    
+    func card3Tapped(){
+        
+    }
+    
+    func card4Tapped(){
+        
     }
     
     func dealCards(){
@@ -45,9 +88,46 @@ class GameViewController: UIViewController {
             cardImageViews[i].image = UIImage(named: "BackOfACard")
         }
     }
-
+    
+    func setUpVC(num : Int){
+        roundLabel.text = "Round \(roundCount)"
+        playerTurnLabel.text = "\(players[num].name)'s Turn"
+        displayBacks()
+    }
+    
+    func rejectCards(num : Int){
+        
+    }
+    
     @IBAction func flipAndShowCards(sender: UIButton) {
         displayCards(playerTurn)
         flipButtonOutlet.hidden = true
+        players[playerTurn].sortHand()
+        rejectCardsView.hidden = false
+        rejectButtonOutlet.hidden = true
+    }
+    
+    @IBAction func yesButtonTapped(sender: UIButton) {
+        rejectCards(playerTurn)
+    }
+    
+    @IBAction func noButtonTapped(sender: UIButton) {
+        playerTurn += 1
+        if playerTurn == numPlayers{
+            playerTurn = 0
+            // segue to next VC and determine winner of round
+        }
+        else{
+            setUpVC(playerTurn)
+        }
+    }
+    
+    @IBAction func rejectButtonTapped(sender: UIButton) {
+        
     }
 }
+
+
+
+
+

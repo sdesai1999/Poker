@@ -337,7 +337,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMH-0U-W1b">
-                                <rect key="frame" x="285" y="472" width="30" height="30"/>
+                                <rect key="frame" x="285" y="466" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="J1D-Eg-nvv"/>
                                     <constraint firstAttribute="height" constant="30" id="OEw-re-ypU"/>
@@ -350,10 +350,53 @@
                                     <action selector="flipAndShowCards:" destination="qNZ-pk-vYk" eventType="touchUpInside" id="Uyc-kn-trE"/>
                                 </connections>
                             </button>
+                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmb-db-fUm">
+                                <rect key="frame" x="224" y="472" width="152" height="67"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reject Cards?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSA-BW-Khb">
+                                        <rect key="frame" x="0.0" y="8" width="152" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgb-9p-vxT">
+                                        <rect key="frame" x="24" y="37" width="30" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Yes">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="yesButtonTapped:" destination="qNZ-pk-vYk" eventType="touchUpInside" id="AeU-Be-i84"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJP-mz-mx2">
+                                        <rect key="frame" x="97" y="37" width="30" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="No">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="noButtonTapped:" destination="qNZ-pk-vYk" eventType="touchUpInside" id="0PR-jP-mco"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTr-C5-uUI">
+                                <rect key="frame" x="277" y="509" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Reject">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rejectButtonTapped:" destination="qNZ-pk-vYk" eventType="touchUpInside" id="JSz-aE-vY7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HQc-na-j89" firstAttribute="leading" secondItem="SqP-oz-Y2D" secondAttribute="leadingMargin" constant="-20" id="2dO-6i-gPN"/>
+                            <constraint firstItem="jmb-db-fUm" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="6XU-Zp-g5L"/>
                             <constraint firstItem="HQc-na-j89" firstAttribute="top" secondItem="SqP-oz-Y2D" secondAttribute="topMargin" id="Ezi-cl-Yyw"/>
                             <constraint firstItem="rMH-0U-W1b" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="HB5-gG-f46"/>
                             <constraint firstItem="TNO-75-Vsc" firstAttribute="top" secondItem="pmx-DG-dJv" secondAttribute="bottom" constant="8" id="IXW-it-FyD"/>
@@ -361,21 +404,32 @@
                             <constraint firstItem="pmx-DG-dJv" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="Taa-ks-TaT"/>
                             <constraint firstItem="j2z-Qs-i5A" firstAttribute="top" secondItem="zAR-n7-adI" secondAttribute="bottom" constant="27" id="XsQ-1Z-ert"/>
                             <constraint firstItem="pmx-DG-dJv" firstAttribute="top" secondItem="j2z-Qs-i5A" secondAttribute="bottom" constant="8" id="gNk-u7-xey"/>
-                            <constraint firstItem="rMH-0U-W1b" firstAttribute="top" secondItem="TNO-75-Vsc" secondAttribute="bottom" constant="8" id="gW7-0O-bPG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HQc-na-j89" secondAttribute="trailing" constant="-20" id="gha-5A-BOB"/>
                             <constraint firstItem="TNO-75-Vsc" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="h6d-3L-oVx"/>
+                            <constraint firstItem="jmb-db-fUm" firstAttribute="top" secondItem="TNO-75-Vsc" secondAttribute="bottom" constant="8" id="pzo-ix-dcY"/>
+                            <constraint firstItem="rMH-0U-W1b" firstAttribute="top" secondItem="TNO-75-Vsc" secondAttribute="bottom" constant="2" id="sDd-Uo-NUN"/>
                             <constraint firstItem="76G-Rl-180" firstAttribute="top" secondItem="HQc-na-j89" secondAttribute="bottom" id="wem-sM-LoN"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="flipButtonOutlet" destination="rMH-0U-W1b" id="eDN-k3-wDR"/>
+                        <outlet property="noButtonOutlet" destination="UJP-mz-mx2" id="wSa-si-4Zv"/>
                         <outlet property="playerTurnLabel" destination="pmx-DG-dJv" id="2Lp-ql-R2G"/>
+                        <outlet property="rejectButtonOutlet" destination="vTr-C5-uUI" id="2Nu-LZ-oWI"/>
+                        <outlet property="rejectCardsLabel" destination="pSA-BW-Khb" id="JAy-Nd-I0K"/>
+                        <outlet property="rejectCardsView" destination="jmb-db-fUm" id="M2U-3g-sId"/>
                         <outlet property="roundLabel" destination="j2z-Qs-i5A" id="FAR-sg-zdp"/>
+                        <outlet property="yesButtonOutlet" destination="vgb-9p-vxT" id="cQ5-Um-jFC"/>
                         <outletCollection property="cardImageViews" destination="B8l-an-nCr" collectionClass="NSMutableArray" id="YPv-gM-dVO"/>
                         <outletCollection property="cardImageViews" destination="0Ct-R3-624" collectionClass="NSMutableArray" id="Hu6-QU-2Pa"/>
                         <outletCollection property="cardImageViews" destination="zc2-2v-OFH" collectionClass="NSMutableArray" id="x1a-b4-fnE"/>
                         <outletCollection property="cardImageViews" destination="1pR-x9-6Pd" collectionClass="NSMutableArray" id="c3g-Yg-9b0"/>
                         <outletCollection property="cardImageViews" destination="4S2-nk-YEx" collectionClass="NSMutableArray" id="N9J-TI-a1G"/>
+                        <outletCollection property="cardUIViews" destination="la6-Fj-dI1" id="wt9-9Z-O3K"/>
+                        <outletCollection property="cardUIViews" destination="pQf-sf-iAj" id="OVL-dI-GHk"/>
+                        <outletCollection property="cardUIViews" destination="dRR-4a-lMq" id="Ytu-ar-jYc"/>
+                        <outletCollection property="cardUIViews" destination="y8c-XE-ZOH" id="mie-cY-zEY"/>
+                        <outletCollection property="cardUIViews" destination="TFz-Z5-Mwa" id="XcT-Sz-gHv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXh-UF-3Kz" userLabel="First Responder" sceneMemberID="firstResponder"/>

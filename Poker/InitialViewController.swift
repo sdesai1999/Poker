@@ -10,6 +10,8 @@ import UIKit
 
 var numPlayers : Int = 0
 var players : [Player] = []
+var pot : Int = 0
+var roundCount : Int = 0
 
 class InitialViewController: UIViewController {
     
@@ -19,6 +21,9 @@ class InitialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(InitialViewController.dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
+        numPlayersField.clearButtonMode = UITextFieldViewMode.WhileEditing
     }
     
     @IBAction func okButtonTapped(sender: UIButton) {
@@ -32,6 +37,10 @@ class InitialViewController: UIViewController {
         if toContinue == true{
             self.performSegueWithIdentifier("PlayersToNames", sender: self)
         }
+    }
+    
+    func dismissKeyboard(){
+        self.view.endEditing(true)
     }
     
 }

@@ -10,11 +10,12 @@ import Foundation
 import UIKit
 
 class Card{
-    var suit:Int = -1
-    var value:Int = -1
-    var suitStr:String = "NaN"
-    var valueStr:String = "NaN"
-    var cardName:String = "NaN"
+    var suit : Int = -1
+    var value : Int = -1
+    var suitStr : String = "NaN"
+    var valueStr : String = "NaN"
+    var cardName : String = "NaN"
+    var image = UIImage()
 }
 
 class Deck{
@@ -22,10 +23,11 @@ class Deck{
 }
 
 class Player{
-    var name:String = ""
+    var name : String = ""
     var hand = [Card]()
-    var handRank:String = ""
-    var myMoney:Int = 0
+    var handRank : String = ""
+    var myMoney : Int = 0
+    var amountToBet : Int = 0
 }
 
 class Dealer{

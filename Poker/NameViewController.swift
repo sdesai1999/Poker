@@ -14,6 +14,8 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(NameViewController.dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
         for i in 0..<numPlayers{
             let nameField = UITextField(frame: CGRectMake(self.view.frame.width / 2 - 117, 36.5 * CGFloat(i) + 150, 234, 30))
             nameField.placeholder = "Player \(i+1)'s Name"
@@ -42,6 +44,11 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         player.myMoney = 100
         players.append(player)
     }
+    
+    func dismissKeyboard(){
+        self.view.endEditing(true)
+    }
+    
     @IBAction func playPoker(sender: UIButton) {
         for i in 0..<numPlayers{
             createPlayer(nameFields[i].text!)

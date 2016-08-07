@@ -12,6 +12,7 @@ class GameViewController: UIViewController {
 
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var playerTurnLabel: UILabel!
+    @IBOutlet weak var flipButtonOutlet: UIButton!
     @IBOutlet var cardImageViews: [UIImageView]!
     
     override func viewDidLoad() {
@@ -20,6 +21,7 @@ class GameViewController: UIViewController {
         playerTurnLabel.text = "\(players[0].name)'s Turn"
         deck.shuffleDeck()
         dealCards()
+        displayBacks()
     }
     
     func dealCards(){
@@ -37,5 +39,15 @@ class GameViewController: UIViewController {
             cardImageViews[i].image = players[num].hand[i].image
         }
     }
+    
+    func displayBacks(){
+        for i in 0..<5{
+            cardImageViews[i].image = UIImage(named: "BackOfACard")
+        }
+    }
 
+    @IBAction func flipAndShowCards(sender: UIButton) {
+        displayCards(playerTurn)
+        flipButtonOutlet.hidden = true
+    }
 }

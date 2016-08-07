@@ -245,7 +245,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="____'s Turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmx-DG-dJv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="____'s Turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmx-DG-dJv">
                                 <rect key="frame" x="175" y="107" width="250" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -254,7 +254,7 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNO-75-Vsc">
                                 <rect key="frame" x="138" y="136" width="325" height="328"/>
                                 <subviews>
-                                    <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TFz-Z5-Mwa">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TFz-Z5-Mwa">
                                         <rect key="frame" x="168" y="168" width="103" height="150"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4S2-nk-YEx">
@@ -270,7 +270,7 @@
                                             <constraint firstAttribute="width" constant="103" id="7mZ-RO-R5b"/>
                                         </constraints>
                                     </view>
-                                    <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dRR-4a-lMq">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dRR-4a-lMq">
                                         <rect key="frame" x="222" y="10" width="103" height="150"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zc2-2v-OFH">
@@ -286,7 +286,7 @@
                                             <constraint firstAttribute="height" constant="150" id="wLO-h1-jyx"/>
                                         </constraints>
                                     </view>
-                                    <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pQf-sf-iAj">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pQf-sf-iAj">
                                         <rect key="frame" x="111" y="10" width="103" height="150"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ct-R3-624">
@@ -298,7 +298,7 @@
                                             <constraint firstAttribute="height" constant="150" id="hoD-Xw-uQR"/>
                                         </constraints>
                                     </view>
-                                    <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y8c-XE-ZOH">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y8c-XE-ZOH">
                                         <rect key="frame" x="57" y="168" width="103" height="150"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pR-x9-6Pd">
@@ -314,7 +314,7 @@
                                             <constraint firstAttribute="height" constant="150" id="xIZ-uJ-Eg6"/>
                                         </constraints>
                                     </view>
-                                    <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="la6-Fj-dI1">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="la6-Fj-dI1">
                                         <rect key="frame" x="0.0" y="10" width="103" height="150"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8l-an-nCr">
@@ -336,21 +336,39 @@
                                     <constraint firstAttribute="width" constant="325" id="CbV-W4-sdH"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMH-0U-W1b">
+                                <rect key="frame" x="285" y="472" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="J1D-Eg-nvv"/>
+                                    <constraint firstAttribute="height" constant="30" id="OEw-re-ypU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Flip">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipAndShowCards:" destination="qNZ-pk-vYk" eventType="touchUpInside" id="Uyc-kn-trE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HQc-na-j89" firstAttribute="leading" secondItem="SqP-oz-Y2D" secondAttribute="leadingMargin" constant="-20" id="2dO-6i-gPN"/>
                             <constraint firstItem="HQc-na-j89" firstAttribute="top" secondItem="SqP-oz-Y2D" secondAttribute="topMargin" id="Ezi-cl-Yyw"/>
+                            <constraint firstItem="rMH-0U-W1b" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="HB5-gG-f46"/>
                             <constraint firstItem="TNO-75-Vsc" firstAttribute="top" secondItem="pmx-DG-dJv" secondAttribute="bottom" constant="8" id="IXW-it-FyD"/>
                             <constraint firstItem="j2z-Qs-i5A" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="QI9-2n-882"/>
+                            <constraint firstItem="pmx-DG-dJv" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="Taa-ks-TaT"/>
                             <constraint firstItem="j2z-Qs-i5A" firstAttribute="top" secondItem="zAR-n7-adI" secondAttribute="bottom" constant="27" id="XsQ-1Z-ert"/>
                             <constraint firstItem="pmx-DG-dJv" firstAttribute="top" secondItem="j2z-Qs-i5A" secondAttribute="bottom" constant="8" id="gNk-u7-xey"/>
+                            <constraint firstItem="rMH-0U-W1b" firstAttribute="top" secondItem="TNO-75-Vsc" secondAttribute="bottom" constant="8" id="gW7-0O-bPG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HQc-na-j89" secondAttribute="trailing" constant="-20" id="gha-5A-BOB"/>
                             <constraint firstItem="TNO-75-Vsc" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="h6d-3L-oVx"/>
                             <constraint firstItem="76G-Rl-180" firstAttribute="top" secondItem="HQc-na-j89" secondAttribute="bottom" id="wem-sM-LoN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="flipButtonOutlet" destination="rMH-0U-W1b" id="eDN-k3-wDR"/>
                         <outlet property="playerTurnLabel" destination="pmx-DG-dJv" id="2Lp-ql-R2G"/>
                         <outlet property="roundLabel" destination="j2z-Qs-i5A" id="FAR-sg-zdp"/>
                         <outletCollection property="cardImageViews" destination="B8l-an-nCr" collectionClass="NSMutableArray" id="YPv-gM-dVO"/>

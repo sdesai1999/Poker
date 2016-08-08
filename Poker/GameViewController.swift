@@ -128,13 +128,16 @@ class GameViewController: UIViewController {
     }
     
     func rejectCards(num : Int){
-        
+        for i in 0..<cardUIViews.count{
+            if cardUIViews[i].backgroundColor == UIColor.greenColor(){
+                players[playerTurn].hand.removeAtIndex(i)
+            }
+        }
     }
     
     @IBAction func flipAndShowCards(sender: UIButton) {
         displayCards(playerTurn)
         flipButtonOutlet.hidden = true
-        players[playerTurn].sortHand()
         rejectCardsView.hidden = false
         rejectButtonOutlet.hidden = true
     }

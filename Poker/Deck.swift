@@ -1,19 +1,13 @@
 //
-//  PokerElements.swift
+//  Deck.swift
 //  Poker
 //
-//  Created by Saurav Desai on 8/5/16.
+//  Created by Saurav Desai on 8/8/16.
 //  Copyright © 2016 Saurav Desai. All rights reserved.
 //
 
 import Foundation
 import UIKit
-
-class Card{
-    var suit : Int = -1
-    var value : Int = -1
-    var image = UIImage()
-}
 
 class Deck{
     var cards = [Card]()
@@ -54,37 +48,6 @@ class Deck{
         cards.shuffle()
     }
 }
-
-class Player{
-    var name : String = ""
-    var hand = [Card]()
-    var handRank : String = ""
-    var myMoney : Int = 0
-    var amountToBet : Int = 0
-    
-    func sortHand(){ // selection sort to sort the player's hand by value
-        var pos = -1
-        let n = hand.count
-        for j in 0..<(n-1){
-            pos = j
-            for k in (j+1)..<n{
-                if hand[k].value < hand[pos].value{
-                    pos = k
-                }
-            }
-            let temp = hand[j]
-            hand[j] = hand[pos]
-            hand[pos] = temp
-        }
-    }
-}
-
-/*
-class Dealer{
-    var players = [Player]()
-    var dealersMoney = 0
-}
-*/
 
 extension Array{
     // randomizes the elements in an array

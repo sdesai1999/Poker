@@ -19,6 +19,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var yesButtonOutlet: UIButton!
     @IBOutlet weak var noButtonOutlet: UIButton!
     @IBOutlet weak var rejectButtonOutlet: UIButton!
+    @IBOutlet weak var nextButtonOutlet: UIButton!
     @IBOutlet var cardUIViews: [UIView]!
     
     var numTapped : Int = 0
@@ -26,6 +27,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         rejectCardsView.hidden = true
+        nextButtonOutlet.hidden = true
         deck.shuffleDeck()
         dealCards()
         setUpVC(playerTurn)
@@ -128,9 +130,15 @@ class GameViewController: UIViewController {
     }
     
     func rejectCards(num : Int){
-        for i in 0..<cardUIViews.count{
-            if cardUIViews[i].backgroundColor == UIColor.greenColor(){
-                players[playerTurn].hand.removeAtIndex(i)
+        if numTapped != 0{
+            for i in 0..<cardUIViews.count{
+                if cardUIViews[i].backgroundColor == UIColor.greenColor(){
+                    players[num].hand.removeAtIndex(i)
+                    players[num].hand.insert(deck.cards[0], atIndex: i)
+                    deck.cards.removeAtIndex(0)
+                    cardUIViews[i].backgroundColor = UIColor.clearColor()
+                    cardImageViews[i].image = UIImage(named: "BackOfACard")
+                }
             }
         }
     }
@@ -160,7 +168,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func noButtonTapped(sender: UIButton) {
-        playerTurn += 1
+        //playerTurn += 1
         if playerTurn == numPlayers{
             playerTurn = 0
             // segue to next VC and determine winner of round
@@ -172,6 +180,22 @@ class GameViewController: UIViewController {
     
     @IBAction func rejectButtonTapped(sender: UIButton) {
         rejectCards(playerTurn)
+        for imageView in cardImageViews{
+            imageView.userInteractionEnabled = false
+        }
+        rejectCardsLabel.hidden = true
+        rejectButtonOutlet.hidden = true
+        nextButtonOutlet.hidden = false
+    }
+    
+    @IBAction func nextButtonTapped(sender: UIButton) {
+        if (playerTurn + 1) == numPlayers{
+            // playerTurn = 0
+            // determine winner of round
+        }
+        else{
+            //CONTINUE HERE
+        }
     }
 }
 

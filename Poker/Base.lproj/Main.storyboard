@@ -393,9 +393,20 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2A-Xy-ljG">
+                                        <rect key="frame" x="57" y="37" width="39" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="qNZ-pk-vYk" eventType="touchUpInside" id="zKQ-If-475"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="pSA-BW-Khb" firstAttribute="centerX" secondItem="jmb-db-fUm" secondAttribute="centerX" id="dDp-mQ-by7"/>
+                                    <constraint firstItem="e2A-Xy-ljG" firstAttribute="centerX" secondItem="jmb-db-fUm" secondAttribute="centerX" id="qAg-0s-giP"/>
                                     <constraint firstItem="vTr-C5-uUI" firstAttribute="centerX" secondItem="jmb-db-fUm" secondAttribute="centerX" id="zxv-Fe-k9g"/>
                                 </constraints>
                             </view>
@@ -420,6 +431,7 @@
                     </view>
                     <connections>
                         <outlet property="flipButtonOutlet" destination="rMH-0U-W1b" id="eDN-k3-wDR"/>
+                        <outlet property="nextButtonOutlet" destination="e2A-Xy-ljG" id="hl8-Ad-Fqy"/>
                         <outlet property="noButtonOutlet" destination="UJP-mz-mx2" id="wSa-si-4Zv"/>
                         <outlet property="playerTurnLabel" destination="pmx-DG-dJv" id="2Lp-ql-R2G"/>
                         <outlet property="rejectButtonOutlet" destination="vTr-C5-uUI" id="2Nu-LZ-oWI"/>

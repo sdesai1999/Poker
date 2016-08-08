@@ -350,15 +350,9 @@
                                     <action selector="flipAndShowCards:" destination="qNZ-pk-vYk" eventType="touchUpInside" id="Uyc-kn-trE"/>
                                 </connections>
                             </button>
-                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmb-db-fUm">
-                                <rect key="frame" x="224" y="472" width="152" height="67"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmb-db-fUm">
+                                <rect key="frame" x="224" y="504" width="152" height="67"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reject Cards?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSA-BW-Khb">
-                                        <rect key="frame" x="0.0" y="8" width="152" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgb-9p-vxT">
                                         <rect key="frame" x="24" y="37" width="30" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
@@ -379,19 +373,28 @@
                                             <action selector="noButtonTapped:" destination="qNZ-pk-vYk" eventType="touchUpInside" id="0PR-jP-mco"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTr-C5-uUI">
+                                        <rect key="frame" x="53" y="37" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Reject">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rejectButtonTapped:" destination="qNZ-pk-vYk" eventType="touchUpInside" id="JSz-aE-vY7"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Reject Cards?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSA-BW-Khb">
+                                        <rect key="frame" x="0.0" y="8" width="152" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="pSA-BW-Khb" firstAttribute="centerX" secondItem="jmb-db-fUm" secondAttribute="centerX" id="dDp-mQ-by7"/>
+                                    <constraint firstItem="vTr-C5-uUI" firstAttribute="centerX" secondItem="jmb-db-fUm" secondAttribute="centerX" id="zxv-Fe-k9g"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTr-C5-uUI">
-                                <rect key="frame" x="277" y="509" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <state key="normal" title="Reject">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="rejectButtonTapped:" destination="qNZ-pk-vYk" eventType="touchUpInside" id="JSz-aE-vY7"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -400,13 +403,13 @@
                             <constraint firstItem="HQc-na-j89" firstAttribute="top" secondItem="SqP-oz-Y2D" secondAttribute="topMargin" id="Ezi-cl-Yyw"/>
                             <constraint firstItem="rMH-0U-W1b" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="HB5-gG-f46"/>
                             <constraint firstItem="TNO-75-Vsc" firstAttribute="top" secondItem="pmx-DG-dJv" secondAttribute="bottom" constant="8" id="IXW-it-FyD"/>
+                            <constraint firstItem="jmb-db-fUm" firstAttribute="top" secondItem="rMH-0U-W1b" secondAttribute="bottom" constant="8" id="OaX-In-7Tg"/>
                             <constraint firstItem="j2z-Qs-i5A" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="QI9-2n-882"/>
                             <constraint firstItem="pmx-DG-dJv" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="Taa-ks-TaT"/>
                             <constraint firstItem="j2z-Qs-i5A" firstAttribute="top" secondItem="zAR-n7-adI" secondAttribute="bottom" constant="27" id="XsQ-1Z-ert"/>
                             <constraint firstItem="pmx-DG-dJv" firstAttribute="top" secondItem="j2z-Qs-i5A" secondAttribute="bottom" constant="8" id="gNk-u7-xey"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HQc-na-j89" secondAttribute="trailing" constant="-20" id="gha-5A-BOB"/>
                             <constraint firstItem="TNO-75-Vsc" firstAttribute="centerX" secondItem="SqP-oz-Y2D" secondAttribute="centerX" id="h6d-3L-oVx"/>
-                            <constraint firstItem="jmb-db-fUm" firstAttribute="top" secondItem="TNO-75-Vsc" secondAttribute="bottom" constant="8" id="pzo-ix-dcY"/>
                             <constraint firstItem="rMH-0U-W1b" firstAttribute="top" secondItem="TNO-75-Vsc" secondAttribute="bottom" constant="2" id="sDd-Uo-NUN"/>
                             <constraint firstItem="76G-Rl-180" firstAttribute="top" secondItem="HQc-na-j89" secondAttribute="bottom" id="wem-sM-LoN"/>
                         </constraints>

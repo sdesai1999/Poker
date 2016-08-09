@@ -19,7 +19,7 @@ class BettingViewController: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(tap)
         for i in 0..<numPlayers{
             let bettingField = UITextField(frame: CGRectMake(self.view.frame.width / 2 - 117, 36.5 * CGFloat(i) + 150, 234, 30))
-            bettingField.placeholder = "\(players[i].name)'s Bet ($\(players[i].myMoney) left)"
+            bettingField.placeholder = "\(players[i].name)'s Bet ($\(players[i].money) left)"
             bettingField.font = UIFont.systemFontOfSize(15)
             bettingField.borderStyle = UITextBorderStyle.RoundedRect
             bettingField.autocorrectionType = UITextAutocorrectionType.No
@@ -41,7 +41,7 @@ class BettingViewController: UIViewController, UITextFieldDelegate {
         var safeToContinue = true
         for i in 0..<numPlayers{
             if let tmpToBet = Int(bettingFields[i].text!){
-                if tmpToBet > 0 && tmpToBet <= players[i].myMoney{
+                if tmpToBet > 0 && tmpToBet <= players[i].money{
                     players[i].amountToBet = tmpToBet
                 }
                 else{
@@ -56,6 +56,9 @@ class BettingViewController: UIViewController, UITextFieldDelegate {
             deck.newDeck()
             for i in 0..<numPlayers{
                 pot += players[i].amountToBet
+            }
+            for i in 0..<numPlayers{
+                players[i].money -= players[i].amountToBet
             }
             self.performSegueWithIdentifier("exitBettingVC", sender: self)
         }

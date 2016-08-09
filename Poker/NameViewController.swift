@@ -41,7 +41,7 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     func createPlayer(tmpName : String){
         let player = Player()
         player.name = tmpName
-        player.myMoney = 100
+        player.money = 100
         players.append(player)
     }
     

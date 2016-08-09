@@ -14,8 +14,6 @@ var pot : Int = 0
 var roundCount : Int = 0
 var deck = Deck()
 var playerTurn : Int = 0
-var roundWinner : String = ""
-var rankThatWon : String = ""
 
 class InitialViewController: UIViewController {
     

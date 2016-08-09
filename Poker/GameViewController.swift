@@ -28,6 +28,8 @@ class GameViewController: UIViewController {
     var tapRecognizer2 = UITapGestureRecognizer()
     var tapRecognizer3 = UITapGestureRecognizer()
     var tapRecognizer4 = UITapGestureRecognizer()
+    var roundWinners : [String] = []
+    var rankThatWon : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -160,6 +162,15 @@ class GameViewController: UIViewController {
         }
     }
     
+    func endOfRoundAlertMessage(message : String){
+        let alert = UIAlertController(title: "Round Complete", message: message, preferredStyle: .Alert)
+        let nextButton = UIAlertAction(title: "Next", style: .Default) { _ in
+            self.performSegueWithIdentifier("EndOfRound", sender: self)
+        }
+        alert.addAction(nextButton)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
     func determineRoundWinner(){
         var winner : Int = -1
         var handRanks = [Int]()
@@ -205,7 +216,7 @@ class GameViewController: UIViewController {
         default:
             rankThatWon = "No Pair"
         }
-        if maxRankCount > 1 && maxRank != 10{
+        if maxRankCount > 1 && maxRank != 9{ // non royal flush ties
             for i in 0..<winnerList.count{
                 players[winnerList[i]].getHighestCard()
                 highestCards.append(players[winnerList[i]].highestCard)
@@ -217,9 +228,44 @@ class GameViewController: UIViewController {
                     winner = winnerList[i]
                 }
             }
-            players[winner].myMoney += pot
+            players[winner].money += pot
+            roundWinners.append(players[winner].name)
+            let alertMessage = "\(roundWinners[0]) is the winner of this round (\(rankThatWon), $\(pot))."
             pot = 0
-            roundWinner = players[winner].name
+            self.endOfRoundAlertMessage(alertMessage)
+        }
+        if maxRankCount > 1 && maxRankCount == 9{ // extremely rare royal flush ties
+            if pot % maxRankCount != 0{
+                var amountToReduce = pot % maxRankCount
+                pot -= amountToReduce
+                amountToReduce = 0
+            }
+            var moneyToAward = pot/maxRankCount
+            for i in 0..<winnerList.count{
+                players[winnerList[i]].money += moneyToAward
+            }
+            for i in 0..<winnerList.count{
+                roundWinners.append(players[winnerList[i]].name)
+            }
+            var alertMessage = "Round Winners: "
+            for i in 0..<winnerList.count{
+                if i == winnerList.count-1{
+                    alertMessage += "\(players[winnerList[i]].name) "
+                    break
+                }
+                alertMessage += "\(players[winnerList[i]].name), "
+            }
+            alertMessage += "(Royal Flush, \(moneyToAward))."
+            pot = 0
+            moneyToAward = 0
+            self.endOfRoundAlertMessage(alertMessage)
+        }
+        if maxRankCount == 1{ // no ties
+            winner = winnerList[0]
+            players[winner].money += pot
+            roundWinners.append(players[winner].name)
+            // show alert view with winner's information
+            // segue to next VC where more players can be added, players can leave, and playes can choose to end the game
         }
     }
     
@@ -245,8 +291,8 @@ class GameViewController: UIViewController {
     
     @IBAction func noButtonTapped(sender: UIButton) {
         if (playerTurn + 1) == numPlayers{
-            //playerTurn = 0
-            // segue to next VC and determine winner of round
+            playerTurn = 0
+            self.determineRoundWinner()
         }
         else{
             playerTurn += 1
@@ -268,8 +314,8 @@ class GameViewController: UIViewController {
     
     @IBAction func nextButtonTapped(sender: UIButton) {
         if (playerTurn + 1) == numPlayers{
-            //playerTurn = 0
-            // determine winner of round
+            playerTurn = 0
+            self.determineRoundWinner()
         }
         else{
             playerTurn += 1

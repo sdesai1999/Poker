@@ -12,7 +12,7 @@ class Player{
     var name : String = ""
     var hand = [Card]()
     var handRank : Int = Int.min
-    var myMoney : Int = 0
+    var money : Int = 0
     var amountToBet : Int = 0
     var highestCard : Int = 0
     

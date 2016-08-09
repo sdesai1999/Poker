@@ -449,11 +449,41 @@
                         <outletCollection property="cardUIViews" destination="dRR-4a-lMq" collectionClass="NSMutableArray" id="Ytu-ar-jYc"/>
                         <outletCollection property="cardUIViews" destination="y8c-XE-ZOH" collectionClass="NSMutableArray" id="mie-cY-zEY"/>
                         <outletCollection property="cardUIViews" destination="TFz-Z5-Mwa" collectionClass="NSMutableArray" id="XcT-Sz-gHv"/>
+                        <segue destination="PLV-gM-nlx" kind="show" identifier="EndOfRound" id="Hf8-Bn-TE3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXh-UF-3Kz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3449" y="591"/>
+        </scene>
+        <!--End Of Round View Controller-->
+        <scene sceneID="tpe-vO-tQZ">
+            <objects>
+                <viewController id="PLV-gM-nlx" customClass="EndOfRoundViewController" customModule="Poker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wvs-vF-K9N"/>
+                        <viewControllerLayoutGuide type="bottom" id="IFD-0q-t7x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xkF-Zn-hjc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokerTexture1" translatesAutoresizingMaskIntoConstraints="NO" id="ulZ-Lf-auz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ulZ-Lf-auz" secondAttribute="trailing" constant="-20" id="SdL-7G-TiO"/>
+                            <constraint firstItem="IFD-0q-t7x" firstAttribute="top" secondItem="ulZ-Lf-auz" secondAttribute="bottom" id="T3w-SQ-4zT"/>
+                            <constraint firstItem="ulZ-Lf-auz" firstAttribute="leading" secondItem="xkF-Zn-hjc" secondAttribute="leadingMargin" constant="-20" id="ZhU-7l-1xz"/>
+                            <constraint firstItem="ulZ-Lf-auz" firstAttribute="top" secondItem="xkF-Zn-hjc" secondAttribute="topMargin" id="kUA-oO-nTf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rVA-rf-x41" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4279" y="591"/>
         </scene>
         <!--Instruction View Controller-->
         <scene sceneID="kyd-WJ-3aY">

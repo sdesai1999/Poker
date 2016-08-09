@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85006C8B1D5A5AB400EC0A50 /* EndOfRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85006C8A1D5A5AB400EC0A50 /* EndOfRoundViewController.swift */; };
 		853F2F711D567FB70026ABF0 /* BettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853F2F701D567FB70026ABF0 /* BettingViewController.swift */; };
 		859428231D55607F00EBB275 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859428221D55607F00EBB275 /* InstructionViewController.swift */; };
 		859428251D5584BE00EBB275 /* RankInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859428241D5584BE00EBB275 /* RankInstructionsViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		85006C8A1D5A5AB400EC0A50 /* EndOfRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndOfRoundViewController.swift; sourceTree = "<group>"; };
 		853F2F701D567FB70026ABF0 /* BettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BettingViewController.swift; sourceTree = "<group>"; };
 		859428221D55607F00EBB275 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		859428241D5584BE00EBB275 /* RankInstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankInstructionsViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				85A19ABF1D56388B008DE767 /* NameViewController.swift */,
 				853F2F701D567FB70026ABF0 /* BettingViewController.swift */,
 				8598C4D11D57B2070089E56B /* GameViewController.swift */,
+				85006C8A1D5A5AB400EC0A50 /* EndOfRoundViewController.swift */,
 				85BD93B61D544CAF005F7B47 /* Main.storyboard */,
 				859428241D5584BE00EBB275 /* RankInstructionsViewController.swift */,
 				859428221D55607F00EBB275 /* InstructionViewController.swift */,
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85006C8B1D5A5AB400EC0A50 /* EndOfRoundViewController.swift in Sources */,
 				85CEE3FE1D59462300944407 /* Deck.swift in Sources */,
 				853F2F711D567FB70026ABF0 /* BettingViewController.swift in Sources */,
 				859428231D55607F00EBB275 /* InstructionViewController.swift in Sources */,

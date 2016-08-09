@@ -30,6 +30,7 @@ class GameViewController: UIViewController {
     var tapRecognizer4 = UITapGestureRecognizer()
     var roundWinners : [String] = []
     var rankThatWon : String = ""
+    var isSecond = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -264,8 +265,9 @@ class GameViewController: UIViewController {
             winner = winnerList[0]
             players[winner].money += pot
             roundWinners.append(players[winner].name)
-            // show alert view with winner's information
-            // segue to next VC where more players can be added, players can leave, and playes can choose to end the game
+            let alertMessage = "\(roundWinners[0]) is the winner of this round (\(rankThatWon), $\(pot))."
+            pot = 0
+            self.endOfRoundAlertMessage(alertMessage)
         }
     }
     
@@ -277,6 +279,13 @@ class GameViewController: UIViewController {
         rejectCardsLabel.hidden = false
         yesButtonOutlet.hidden = false
         noButtonOutlet.hidden = false
+        if isSecond == true{
+            nextButtonOutlet.hidden = false
+            rejectCardsLabel.hidden = true
+            noButtonOutlet.hidden = true
+            yesButtonOutlet.hidden = true
+            isSecond = false
+        }
     }
     
     @IBAction func yesButtonTapped(sender: UIButton) {
@@ -308,7 +317,9 @@ class GameViewController: UIViewController {
         }
         rejectCardsLabel.hidden = true
         rejectButtonOutlet.hidden = true
-        nextButtonOutlet.hidden = false
+        nextButtonOutlet.hidden = true
+        flipButtonOutlet.hidden = false
+        isSecond = true
         numTapped = 0
     }
     

@@ -471,19 +471,97 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokerTexture1" translatesAutoresizingMaskIntoConstraints="NO" id="ulZ-Lf-auz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkj-Mk-tX7">
+                                <rect key="frame" x="235" y="362" width="130" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="AR7-bh-rqh"/>
+                                    <constraint firstAttribute="height" constant="54" id="Qls-fr-lfI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                <state key="normal" title="Finish Game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishGameTapped:" destination="PLV-gM-nlx" eventType="touchUpInside" id="Btr-g6-Sh5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXr-y9-2ca">
+                                <rect key="frame" x="222" y="273" width="156" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="ajO-xm-xPW"/>
+                                    <constraint firstAttribute="height" constant="54" id="ici-Gx-vkD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                <state key="normal" title="Remove Player">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removePlayerTapped:" destination="PLV-gM-nlx" eventType="touchUpInside" id="oJY-7Y-TrY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeN-tQ-rKh">
+                                <rect key="frame" x="239" y="184" width="123" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="6Vf-nc-qR7"/>
+                                    <constraint firstAttribute="width" constant="123" id="NAd-EQ-rYB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                <state key="normal" title="Add Player">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPlayerTapped:" destination="PLV-gM-nlx" eventType="touchUpInside" id="Wgi-91-gDO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqr-pn-NFK">
+                                <rect key="frame" x="202" y="437" width="197" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="hWc-w6-Y8l"/>
+                                    <constraint firstAttribute="width" constant="197" id="mph-ag-kGM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round 1 Finished" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPk-qA-2fu">
+                                <rect key="frame" x="124" y="47" width="352" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="ckP-Qe-aMi"/>
+                                    <constraint firstAttribute="width" constant="352" id="u5P-ef-BBa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Nqr-pn-NFK" firstAttribute="top" secondItem="Fkj-Mk-tX7" secondAttribute="bottom" constant="21" id="F9d-dO-ZL0"/>
+                            <constraint firstItem="fXr-y9-2ca" firstAttribute="centerY" secondItem="xkF-Zn-hjc" secondAttribute="centerY" id="Its-gu-lF1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ulZ-Lf-auz" secondAttribute="trailing" constant="-20" id="SdL-7G-TiO"/>
                             <constraint firstItem="IFD-0q-t7x" firstAttribute="top" secondItem="ulZ-Lf-auz" secondAttribute="bottom" id="T3w-SQ-4zT"/>
                             <constraint firstItem="ulZ-Lf-auz" firstAttribute="leading" secondItem="xkF-Zn-hjc" secondAttribute="leadingMargin" constant="-20" id="ZhU-7l-1xz"/>
+                            <constraint firstItem="Fkj-Mk-tX7" firstAttribute="top" secondItem="fXr-y9-2ca" secondAttribute="bottom" constant="35" id="aiJ-Fk-c6f"/>
+                            <constraint firstItem="fXr-y9-2ca" firstAttribute="top" secondItem="QeN-tQ-rKh" secondAttribute="bottom" constant="35" id="aum-rP-uIE"/>
+                            <constraint firstItem="Nqr-pn-NFK" firstAttribute="centerX" secondItem="xkF-Zn-hjc" secondAttribute="centerX" id="cSU-mY-1n4"/>
+                            <constraint firstItem="Fkj-Mk-tX7" firstAttribute="centerX" secondItem="xkF-Zn-hjc" secondAttribute="centerX" id="cWt-2e-Jlb"/>
                             <constraint firstItem="ulZ-Lf-auz" firstAttribute="top" secondItem="xkF-Zn-hjc" secondAttribute="topMargin" id="kUA-oO-nTf"/>
+                            <constraint firstItem="fXr-y9-2ca" firstAttribute="centerX" secondItem="xkF-Zn-hjc" secondAttribute="centerX" id="ntr-aD-ap5"/>
+                            <constraint firstItem="QeN-tQ-rKh" firstAttribute="centerX" secondItem="xkF-Zn-hjc" secondAttribute="centerX" id="sYT-Bf-pcK"/>
+                            <constraint firstItem="NPk-qA-2fu" firstAttribute="top" secondItem="Wvs-vF-K9N" secondAttribute="bottom" constant="27" id="ttt-vU-83i"/>
+                            <constraint firstItem="NPk-qA-2fu" firstAttribute="centerX" secondItem="xkF-Zn-hjc" secondAttribute="centerX" id="wHv-Uf-x00"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addPlayerOutlet" destination="QeN-tQ-rKh" id="wAf-CA-Rox"/>
+                        <outlet property="infoLabel" destination="Nqr-pn-NFK" id="Lef-Vh-EtG"/>
+                        <outlet property="removePlayerOutlet" destination="fXr-y9-2ca" id="hgq-On-DRr"/>
+                        <outlet property="titleLabel" destination="NPk-qA-2fu" id="ccW-DQ-qUD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVA-rf-x41" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4279" y="591"/>
+            <point key="canvasLocation" x="4222" y="591"/>
         </scene>
         <!--Instruction View Controller-->
         <scene sceneID="kyd-WJ-3aY">

@@ -23,17 +23,27 @@ class GameViewController: UIViewController {
     @IBOutlet var cardUIViews: [UIView]!
     
     var numTapped : Int = 0
+    var tapRecognizer0 = UITapGestureRecognizer()
+    var tapRecognizer1 = UITapGestureRecognizer()
+    var tapRecognizer2 = UITapGestureRecognizer()
+    var tapRecognizer3 = UITapGestureRecognizer()
+    var tapRecognizer4 = UITapGestureRecognizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rejectCardsView.hidden = true
-        nextButtonOutlet.hidden = true
         deck.shuffleDeck()
         dealCards()
+        tapRecognizer0 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card0Tapped))
+        tapRecognizer1 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card1Tapped))
+        tapRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card2Tapped))
+        tapRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card3Tapped))
+        tapRecognizer4 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card4Tapped))
+        cardImageViews[0].addGestureRecognizer(tapRecognizer0)
+        cardImageViews[1].addGestureRecognizer(tapRecognizer1)
+        cardImageViews[2].addGestureRecognizer(tapRecognizer2)
+        cardImageViews[3].addGestureRecognizer(tapRecognizer3)
+        cardImageViews[4].addGestureRecognizer(tapRecognizer4)
         setUpVC(playerTurn)
-        for imageView in cardImageViews{
-            imageView.userInteractionEnabled = true
-        }
     }
     
     func card0Tapped(){
@@ -124,9 +134,15 @@ class GameViewController: UIViewController {
     }
     
     func setUpVC(num : Int){
+        flipButtonOutlet.hidden = false
+        rejectCardsView.hidden = true
+        nextButtonOutlet.hidden = true
         roundLabel.text = "Round \(roundCount)"
         playerTurnLabel.text = "\(players[num].name)'s Turn"
         displayBacks()
+        for imageView in cardImageViews{
+            imageView.userInteractionEnabled = false
+        }
     }
     
     func rejectCards(num : Int){
@@ -148,6 +164,9 @@ class GameViewController: UIViewController {
         flipButtonOutlet.hidden = true
         rejectCardsView.hidden = false
         rejectButtonOutlet.hidden = true
+        rejectCardsLabel.hidden = false
+        yesButtonOutlet.hidden = false
+        noButtonOutlet.hidden = false
     }
     
     @IBAction func yesButtonTapped(sender: UIButton) {
@@ -155,26 +174,19 @@ class GameViewController: UIViewController {
         yesButtonOutlet.hidden = true
         noButtonOutlet.hidden = true
         rejectButtonOutlet.hidden = false
-        let tapRecognizer0 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card0Tapped))
-        let tapRecognizer1 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card1Tapped))
-        let tapRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card2Tapped))
-        let tapRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card3Tapped))
-        let tapRecognizer4 = UITapGestureRecognizer(target: self, action: #selector(GameViewController.card4Tapped))
-        cardImageViews[0].addGestureRecognizer(tapRecognizer0)
-        cardImageViews[1].addGestureRecognizer(tapRecognizer1)
-        cardImageViews[2].addGestureRecognizer(tapRecognizer2)
-        cardImageViews[3].addGestureRecognizer(tapRecognizer3)
-        cardImageViews[4].addGestureRecognizer(tapRecognizer4)
+        for image in cardImageViews{
+            image.userInteractionEnabled = true
+        }
     }
     
     @IBAction func noButtonTapped(sender: UIButton) {
-        //playerTurn += 1
+        playerTurn += 1
         if playerTurn == numPlayers{
             playerTurn = 0
             // segue to next VC and determine winner of round
         }
         else{
-            //setUpVC(playerTurn)
+            setUpVC(playerTurn)
         }
     }
     
@@ -189,13 +201,22 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(sender: UIButton) {
-        if (playerTurn + 1) == numPlayers{
-            // playerTurn = 0
+        playerTurn += 1
+        if playerTurn == numPlayers{
+            playerTurn = 0
             // determine winner of round
         }
         else{
-            //CONTINUE HERE
+            setUpVC(playerTurn)
         }
+    }
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
     }
 }
 

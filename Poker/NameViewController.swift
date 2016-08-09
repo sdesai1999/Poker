@@ -55,4 +55,12 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         }
         self.performSegueWithIdentifier("exitNamesVC", sender: self)
     }
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
 }

@@ -14,6 +14,7 @@ class BettingViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        roundCount += 1
         let tap = UITapGestureRecognizer(target: self, action: #selector(BettingViewController.dismissKeyboard))
         self.view.addGestureRecognizer(tap)
         for i in 0..<numPlayers{
@@ -55,5 +56,13 @@ class BettingViewController: UIViewController, UITextFieldDelegate {
             deck.newDeck()
             self.performSegueWithIdentifier("exitBettingVC", sender: self)
         }
+    }
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
     }
 }

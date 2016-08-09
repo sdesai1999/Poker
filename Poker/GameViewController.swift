@@ -139,6 +139,7 @@ class GameViewController: UIViewController {
         nextButtonOutlet.hidden = true
         roundLabel.text = "Round \(roundCount)"
         playerTurnLabel.text = "\(players[num].name)'s Turn"
+        rejectCardsLabel.text = "Reject Cards?"
         displayBacks()
         for imageView in cardImageViews{
             imageView.userInteractionEnabled = false
@@ -156,6 +157,69 @@ class GameViewController: UIViewController {
                     cardImageViews[i].image = UIImage(named: "BackOfACard")
                 }
             }
+        }
+    }
+    
+    func determineRoundWinner(){
+        var winner : Int = -1
+        var handRanks = [Int]()
+        var winnerList = [Int]()
+        var highestCards = [Int]()
+        for i in 0..<players.count{
+            players[i].sortHand()
+            players[i].determineHandRank()
+            handRanks.append(players[i].handRank)
+        }
+        var maxRank = -1
+        for i in 0..<handRanks.count{
+            if handRanks[i] >= maxRank{
+                maxRank = handRanks[i]
+            }
+        }
+        var maxRankCount = 0
+        for i in 0..<handRanks.count{
+            if handRanks[i] == maxRank{
+                maxRankCount += 1
+                winnerList.append(i)
+            }
+        }
+        switch maxRank{
+        case 9:
+            rankThatWon = "Royal Flush"
+        case 8:
+            rankThatWon = "Straight Flush"
+        case 7:
+            rankThatWon = "Four Of A Kind"
+        case 6:
+            rankThatWon = "Full House"
+        case 5:
+            rankThatWon = "Flush"
+        case 4:
+            rankThatWon = "Straight"
+        case 3:
+            rankThatWon = "Three of a Kind"
+        case 2:
+            rankThatWon = "Two Pair"
+        case 1:
+            rankThatWon = "One Pair"
+        default:
+            rankThatWon = "No Pair"
+        }
+        if maxRankCount > 1 && maxRank != 10{
+            for i in 0..<winnerList.count{
+                players[winnerList[i]].getHighestCard()
+                highestCards.append(players[winnerList[i]].highestCard)
+            }
+            var maxCard = -1
+            for i in 0..<winnerList.count{
+                if highestCards[i] > maxCard{
+                    maxCard = highestCards[i]
+                    winner = winnerList[i]
+                }
+            }
+            players[winner].myMoney += pot
+            pot = 0
+            roundWinner = players[winner].name
         }
     }
     
@@ -180,12 +244,13 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func noButtonTapped(sender: UIButton) {
-        playerTurn += 1
-        if playerTurn == numPlayers{
-            playerTurn = 0
+        if (playerTurn + 1) == numPlayers{
+            //playerTurn = 0
             // segue to next VC and determine winner of round
         }
         else{
+            playerTurn += 1
+            numTapped = 0
             setUpVC(playerTurn)
         }
     }
@@ -198,16 +263,18 @@ class GameViewController: UIViewController {
         rejectCardsLabel.hidden = true
         rejectButtonOutlet.hidden = true
         nextButtonOutlet.hidden = false
+        numTapped = 0
     }
     
     @IBAction func nextButtonTapped(sender: UIButton) {
-        playerTurn += 1
-        if playerTurn == numPlayers{
-            playerTurn = 0
+        if (playerTurn + 1) == numPlayers{
+            //playerTurn = 0
             // determine winner of round
         }
         else{
+            playerTurn += 1
             setUpVC(playerTurn)
+            numTapped = 0
         }
     }
     

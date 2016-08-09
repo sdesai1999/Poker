@@ -54,6 +54,9 @@ class BettingViewController: UIViewController, UITextFieldDelegate {
         }
         if safeToContinue == true{
             deck.newDeck()
+            for i in 0..<numPlayers{
+                pot += players[i].amountToBet
+            }
             self.performSegueWithIdentifier("exitBettingVC", sender: self)
         }
     }

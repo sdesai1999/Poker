@@ -157,7 +157,7 @@ class Player{
         return a&&b
     }
     
-    func getHandRank(){
+    func determineHandRank(){
         if self.royalFlush(){
             self.handRank = 9
         }
@@ -222,7 +222,7 @@ class Player{
                     break
                 }
             }
-            for i in 0..<hand.count-1{
+            for i in firstPos..<hand.count-1{
                 current = hand[i].value
                 next = hand[i+1].value
                 if current == next && current >= max{

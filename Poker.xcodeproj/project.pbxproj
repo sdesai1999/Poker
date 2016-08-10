@@ -14,6 +14,7 @@
 		859428291D559B6400EBB275 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859428281D559B6400EBB275 /* Card.swift */; };
 		8598C4D21D57B2070089E56B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8598C4D11D57B2070089E56B /* GameViewController.swift */; };
 		85A19AC01D56388B008DE767 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A19ABF1D56388B008DE767 /* NameViewController.swift */; };
+		85B1EB421D5BC56100CB8745 /* EndOfGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1EB411D5BC56100CB8745 /* EndOfGameViewController.swift */; };
 		85BD93B31D544CAF005F7B47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD93B21D544CAF005F7B47 /* AppDelegate.swift */; };
 		85BD93B51D544CAF005F7B47 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD93B41D544CAF005F7B47 /* InitialViewController.swift */; };
 		85BD93B81D544CAF005F7B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BD93B61D544CAF005F7B47 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		859428281D559B6400EBB275 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		8598C4D11D57B2070089E56B /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		85A19ABF1D56388B008DE767 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		85B1EB411D5BC56100CB8745 /* EndOfGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndOfGameViewController.swift; sourceTree = "<group>"; };
 		85BD93AF1D544CAE005F7B47 /* Poker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BD93B21D544CAF005F7B47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85BD93B41D544CAF005F7B47 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				853F2F701D567FB70026ABF0 /* BettingViewController.swift */,
 				8598C4D11D57B2070089E56B /* GameViewController.swift */,
 				85006C8A1D5A5AB400EC0A50 /* EndOfRoundViewController.swift */,
+				85B1EB411D5BC56100CB8745 /* EndOfGameViewController.swift */,
 				85BD93B61D544CAF005F7B47 /* Main.storyboard */,
 				859428241D5584BE00EBB275 /* RankInstructionsViewController.swift */,
 				859428221D55607F00EBB275 /* InstructionViewController.swift */,
@@ -293,6 +296,7 @@
 				8598C4D21D57B2070089E56B /* GameViewController.swift in Sources */,
 				859428251D5584BE00EBB275 /* RankInstructionsViewController.swift in Sources */,
 				859428291D559B6400EBB275 /* Card.swift in Sources */,
+				85B1EB421D5BC56100CB8745 /* EndOfGameViewController.swift in Sources */,
 				85CEE4001D59462F00944407 /* Player.swift in Sources */,
 				85A19AC01D56388B008DE767 /* NameViewController.swift in Sources */,
 			);

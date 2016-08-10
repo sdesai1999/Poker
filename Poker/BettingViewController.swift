@@ -31,6 +31,9 @@ class BettingViewController: UIViewController, UITextFieldDelegate {
             bettingFields.append(bettingField)
             self.view.addSubview(bettingField)
         }
+        for i in 0..<players.count{
+            players[i].amountToBet = 0
+        }
     }
     
     func dismissKeyboard(){
